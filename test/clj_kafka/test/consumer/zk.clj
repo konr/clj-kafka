@@ -2,7 +2,7 @@
   (:use [expectations]
         [clj-kafka.core :only (with-resource to-clojure)]
         [clj-kafka.producer :only (producer send-messages message)]
-        [clj-kafka.test.utils :only (with-test-broker)])
+        [clj-kafka.test-utils :only (with-test-broker)])
   (:require [clj-kafka.consumer.zk :as zk]))
 
 (def producer-config {"metadata.broker.list" "localhost:9999"

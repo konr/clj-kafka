@@ -10,7 +10,7 @@
     (deserialize [bytes] (when bytes (String. bytes "UTF-8")))))
 
 
-(defn zookeeper-from [{:keys [zookeeper-port        zookeeper-host]
+(defn zookeeper-client [{:keys [zookeeper-port        zookeeper-host]
                        :or   {zookeeper-port "2181" zookeeper-host "127.0.0.1"}}]
   (ZkClient. (str zookeeper-host ":" zookeeper-port) 500 500 string-serializer))
 

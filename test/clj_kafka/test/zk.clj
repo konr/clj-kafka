@@ -1,7 +1,7 @@
 (ns clj-kafka.test.zk
   (:use expectations
         clj-kafka.zk
-        [clj-kafka.test.utils :only (with-test-broker)]))
+        [clj-kafka.test-utils :only (with-test-broker)]))
 
 (def config {:zookeeper-port 2182
              :kafka-port 9999
